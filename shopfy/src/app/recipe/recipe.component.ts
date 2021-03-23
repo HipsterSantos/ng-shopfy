@@ -1,3 +1,4 @@
+import { Recipe } from './../shared/recipes.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./recipe.component.scss']
 })
 export class  RecipeComponent{
-
+  recipes:Recipe[] = [new Recipe('','','')]
+  constructor(){
+    this.recipes = [new Recipe('','','')]
+  }
 }

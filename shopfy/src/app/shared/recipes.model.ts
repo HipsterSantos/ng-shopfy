@@ -1,5 +1,8 @@
-export interface Recipes{
-   name: string ;
-   description: string;
-   imgUrl: string;
+export class Recipe{
+  constructor(
+    public name: string,
+    public description: string,
+    public imgUrl: string){
+
+  }
 }
