@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./recipe.component.scss']
 })
 export class  RecipeComponent{
-
+  recipe: Recipe = new Recipe('','','');
   constructor(){
 
   }
+
 }

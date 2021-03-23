@@ -1,4 +1,5 @@
-import { Component , OnInit, SimpleChange, OnChanges} from '@angular/core';
+import { Recipe } from './../../shared/recipes.model';
+import { Component, OnInit, SimpleChange, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-details',
@@ -7,7 +8,7 @@ import { Component , OnInit, SimpleChange, OnChanges} from '@angular/core';
 })
 export class RecipeDetailsComponent implements OnInit{
 
-    recipes: any[] = [];
+  @Input('recipe') recipes:Recipe = new Recipe('','','');
  constructor(){
 
  }
