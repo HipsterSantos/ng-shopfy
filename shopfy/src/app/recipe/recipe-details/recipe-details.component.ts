@@ -7,6 +7,7 @@ import { Component , OnInit, SimpleChange, OnChanges} from '@angular/core';
 })
 export class RecipeDetailsComponent implements OnInit{
 
+    recipes: any[] = [];
  constructor(){
 
  }
