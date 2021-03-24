@@ -1,3 +1,4 @@
+import { RecipeService } from './../../recipe.service';
 import { Recipe } from './../../../shared/recipes.model';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
@@ -10,12 +11,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class RecipeListItemComponent{
   @Input('recipeItem') recipes: Recipe[] = [];
-  @Output() recieve = new EventEmitter<Recipe>();
-  constructor(){
+
+  constructor(private recipeService: RecipeService){
 
   }
 
   sender(val:Recipe){
-      this.recieve.emit(val);
+      this.recipeService.recipeSelected.emit(this.recipes);
   }
 }
