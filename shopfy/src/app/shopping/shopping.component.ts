@@ -13,4 +13,9 @@ export class ShoppingComponent{
     {name: 'tomatoes', amount: 3},
     {name: 'potatos', amount: 34}
   ];
+
+
+  setIngredient(val: Ingredient){
+    this.ingredients.push(val)
+  }
 }
